@@ -1,4 +1,9 @@
-const characterReducer = (state = {}, action) => {
+
+const DEFAULT_STATE = {
+
+};
+
+const characterReducer = (state = DEFAULT_STATE, action) => {
     return state;
 };
 
