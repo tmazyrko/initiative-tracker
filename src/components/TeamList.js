@@ -30,12 +30,12 @@ class TeamList extends React.Component {
     }
 }
 
-const mapStateTopProps = state => {
+const mapStateToProps = state => {
     return {
         players: state.characters.players,
         enemies: state.characters.enemies,
     };
 };
 
-export default connect(mapStateTopProps)(TeamList);
+export default connect(mapStateToProps)(TeamList);
 // connect returns a function which is immediately called, and to which TeamList is passed
