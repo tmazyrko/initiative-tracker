@@ -26,6 +26,7 @@ class TeamList extends React.Component {
                 </ul>
             </div>
         );
+
     }
 }
 
