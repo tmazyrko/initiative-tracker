@@ -43,3 +43,5 @@ class AddPlayer extends React.Component {
         );
     }
 }
+
+export default AddPlayer;
