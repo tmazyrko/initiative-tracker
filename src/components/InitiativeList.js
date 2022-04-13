@@ -6,7 +6,11 @@ import InitiativeItem from './InitiativeItem';
 const InitiativeList = (props) => {
     const { characters } = props;
 
-    const characterList = characters.map((char, index) => {
+    const characterList = characters
+        .sort((a, b) => {
+            return b.initiative - a.initiative;
+        })
+        .map((char, index) => {
         return (
             <InitiativeItem key={index}
                             name={char.name}
