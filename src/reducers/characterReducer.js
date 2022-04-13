@@ -35,6 +35,12 @@ const characterReducer = (state = sortCharacters(DEFAULT_STATE), action) => {
             character.id = generateID();
             state.characters.push(character);
             return sortCharacters(state);
+        case 'REMOVE_CHARACTER':
+            const { id } = action.payload;
+            state.characters = state.characters.filter(char => {
+                return char.id !== id;
+            });
+            return sortCharacters(state);
         default:
             return state;
     }
