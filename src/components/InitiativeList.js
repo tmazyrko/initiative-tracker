@@ -1,11 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-class InitiativeList extends React.Component {
-    render() {
-        return(
-            <h2>Initiative List</h2>
-        );
-    }
+const InitiativeList = (props) => {
+    return (
+        <h2>Initiative List</h2>
+    );
 }
 
-export default InitiativeList;
+function mapStateToProps(state) {
+    return {
+        characters: state.characters.characters,
+    };
+}
+
+export default connect(mapStateToProps)(InitiativeList);
